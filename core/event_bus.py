@@ -12,7 +12,6 @@ class EventBus:
 
   def subscribe(self, event_type, callback):
     self.listeners.setdefault(event_type, []).append(callback)
-    self.one_time_listeners.setdefault(event_type, []).remove(callback)
       
   def unsubscribe(self, event_type, callback):
     if event_type in self.listeners:

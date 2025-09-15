@@ -1,4 +1,4 @@
-class Startup:
+class StartupModule:
   def __init__(self, bus):
     bus.subscribe("system.startup", self.greet)
 
